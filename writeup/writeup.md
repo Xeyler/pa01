@@ -40,9 +40,9 @@ Programming Assignment 01
 8. The function is $O(n)$.
 9. The function is $O(n)$.
 10. The function is $O(1)$.
-11. Function _m1FindLargest_ is $O(n)$ because its highest-order function is looping through each value in an array.
-12. Function _m2PrintTriangle_ is $O(n)$ because its highest-order function is looping through each integer between 1 and the supplied integer.
-13. Function _m3PrintBooks_ is $O(n)$ because its highest-order function is looping through each value in an array.
+11. Function _m1FindLargest_ is $O(n)$. It loops through the domain fully just once, so the complexity is 1:1.
+12. Function _m2PrintTriangle_ is $O(n)$. It loops through the domain fully just once, so the complexity is 1:1. This function is tricky because it contains a nested for loop, but the inner loop never loops more or less than once.
+13. Function _m3PrintBooks_ is $O(n)$. This function's complexity is harder to determine because the domain contains n, the size of the _books_ or _stars_ arrays, as well as n more axes, one axis for the value of each integer stored in the _stars_ array. I determined the complexity in respect to only the first axis, the size of the _books_ or _stars_ arrays.
 
 \noindent PART 2
 
