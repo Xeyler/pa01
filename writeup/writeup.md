@@ -1,27 +1,40 @@
 ---
-title: Programming Assignment 01
-author: Brigham Campbell
-professor: Dr. Griffith
-class: CS 2235
-date: 12 September 2019
----
----
-geometry: margin=1in
 indent: true
-header-includes:
-  - \usepackage{pgfplots}
-  - \usepackage{pgfplotstable}
+geometry: margin=1in
+fontsize: 12pt
+header-includes: 
+ - \usepackage{pgfplots}
+ - \usepackage{pgfplotstable}
+ - \usepackage{fancyhdr}
+ - \usepackage{setspace}
+
+ - \pagestyle{fancy}
+ - \fancyhf{}
+ - \fancyhead[R]{Campbell \thepage}
+ - \renewcommand{\headrulewidth}{0pt}
+ 
+ - \doublespacing
+
 ---
+\noindent Brigham Campbell
 
-# Part 1
+\noindent Dr. Griffith
 
-# Part 2
+\noindent CS 2235
+
+\noindent 11 September 2019
+
+\begin{center}
+Programming Assignment 01
+\end{center}
+
+Hello, World!
 
 \begin{center}
   \begin{tikzpicture}
     \begin{axis}[
       xlabel={Array Size(\# of elements)},
-      ylabel={$\Delta Time(nanoseconds)$},
+      ylabel={$\Delta$Time(nanoseconds)},
       legend entries={Binary Search,Linear Search,Recursive Binary Search,Recursive Linear Search},
       legend style={
         at={(0.02,0.98)},
