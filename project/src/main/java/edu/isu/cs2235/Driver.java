@@ -20,17 +20,20 @@ public class Driver {
 
     // These variables determine what exactly happens during our test of the algorithms' performances.
     int numberOfTriesToAverage = 10000;
-    int[] arraySizes = { 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000 };
+    int[] arraySizes = { 300, 600, 900, 1200, 1500, 1800, 2100, 2400, 2700, 3000 };
     ArraySearch[] searchMethods = { new BinarySearch(), new LinearSearch(), new RecursiveBinarySearch(), new RecursiveLinearSearch() };
 
     public static void main(String[] args) {
         Driver driver = new Driver();
-        if(args[0] != null) {
+        if(args.length > 0 && args[0] != null) {
             driver.numberOfTriesToAverage = Integer.parseInt(args[0]);
         }
-        driver.run();
+	driver.run();
     }
 
+    /**
+     * Performs the tests on each object in searchMethods, outputting the results to stdout.
+     */
     public void run() {
         System.out.print("arraySize");
         for(ArraySearch searchMethod : searchMethods) {
@@ -47,8 +50,6 @@ public class Driver {
                 for(int i = 0; i < numberOfTriesToAverage; i += 1) {
                     Integer randomArrayElement = array[rng.nextInt(array.length)];
 
-                    searchMethod.search(array, randomArrayElement);
-
                     long beginTime = System.nanoTime();
                     searchMethod.search(array, randomArrayElement);
                     long deltaTime = System.nanoTime() - beginTime;
@@ -62,6 +63,12 @@ public class Driver {
         }
     }
 
+    /**
+     *
+     * @param size Size of array to generate.
+     * @return An array populated with random values. The values are always
+     * sorted in ascending order.
+     */
     public Integer[] generateRandomIntArray(int size) {
         Integer[] array = new Integer[size];
         Integer value = 0;

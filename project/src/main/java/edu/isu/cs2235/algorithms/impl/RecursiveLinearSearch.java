@@ -8,11 +8,11 @@ import edu.isu.cs2235.algorithms.ArraySearch;
 public class RecursiveLinearSearch implements ArraySearch {
 
     /**
-     * Generic array search method.
+     * Recursive linear search implementation.
      *
-     * @param array Array to be search for the provided item
+     * @param array Array to be searched for the provided item
      * @param item  Item to be found
-     * @return The index of the provided item in the array. Returns -1 if any of
+     * @return The index of the specified item in the array. Returns -1 if any of
      * the following conditions are met:
      * <ul>
      * <li>The provided array is null</li>
@@ -29,7 +29,7 @@ public class RecursiveLinearSearch implements ArraySearch {
         return recLinearSearch(array, item, 0);
     }
 
-    public <E extends Comparable> int recLinearSearch(E[] array, E item, int index) {
+    private <E extends Comparable> int recLinearSearch(E[] array, E item, int index) {
         if(index >= array.length) {
             return -1;
         } else if(array[index].compareTo(item) == 0) {

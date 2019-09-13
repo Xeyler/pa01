@@ -8,11 +8,11 @@ import edu.isu.cs2235.algorithms.ArraySearch;
 public class RecursiveBinarySearch implements ArraySearch {
 
     /**
-     * Generic array search method.
+     * Recursive binary search implementation.
      *
-     * @param array Array to be search for the provided item
+     * @param array Array to be searched for the provided item
      * @param item  Item to be found
-     * @return The index of the provided item in the array. Returns -1 if any of
+     * @return The index of the specified item in the array. Returns -1 if any of
      * the following conditions are met:
      * <ul>
      * <li>The provided array is null</li>
@@ -29,7 +29,7 @@ public class RecursiveBinarySearch implements ArraySearch {
         return recBinarySearch(array, item, 0, array.length - 1);
     }
 
-    public <E extends Comparable> int recBinarySearch(E[] array, E item, int low, int high) {
+    private <E extends Comparable> int recBinarySearch(E[] array, E item, int low, int high) {
         int index = (low + high) / 2;
         if(low > high)
             return -1;
