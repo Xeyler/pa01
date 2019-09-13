@@ -69,6 +69,6 @@ The following figure is the result of plotting the averages of the length of tim
 
 As the graph shows, Recursive Linear Search quickly becomes the slowest algorithm as its given larger arrays. By inspection, we see that Linear Search is in the same order as Recursive Linear Search, but is scaled such that it will take nearly one fourth the time that Recursive Linear Search will take for the same array size. This makes sense because rapid function calls impose significant overhead in Java.
 
-Comparatively, both Binary Search and Recursive Binary Search take a very small amount of time to complete. This makes sense as Binary Search is $O(log(n))$ while Linear Search is $O(n)$.
+Comparatively, both Binary Search and Recursive Binary Search take a very small amount of time to complete. This makes sense as Binary Search is $O(log(n))$ while Linear Search is $O(n)$. However, I was surprised to see that the recursive and linear versions of the algorithm are very similar in timing. I would expect the recursive version to take four times as long as the linear search.
 
 From these results, we can conclude that some recursive or linear implementation of Binary Search is more efficient than Linear Search when searching through sorted data.

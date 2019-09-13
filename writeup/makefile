@@ -6,4 +6,4 @@ timings.csv:
 
 .PHONY: clean
 clean:
-	rm edit $(objects)
+	rm writeup.pdf timings.csv
